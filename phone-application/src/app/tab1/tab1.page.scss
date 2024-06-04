@@ -1,0 +1,30 @@
+@use '/src/theme/variables.scss' as var;
+@use '/src/theme/colors.scss' as color;
+
+:host {
+    background: radial-gradient(circle, color.$color-background-1, color.$color-background-2 80%);
+    height: 100vh;
+    margin: 0;
+    color: color.$color-main-1;
+
+    display: flex;
+    justify-content: flex-start;
+
+    .title {
+        align-self: center;
+    }
+
+    .list{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-items: center;
+        gap: var.$spacer-m;
+        margin: var.$spacer-l;
+        overflow-y: scroll;
+
+        .flag {
+            width: 90%;
+        }
+
+    }
+}

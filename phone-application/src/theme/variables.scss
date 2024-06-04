@@ -1,0 +1,8 @@
+@use 'sass:math';
+@use '/src//theme/typography.scss' as typo;
+
+$spacer-m: math.div(10em, typo.$font-size-init-calc);
+$spacer-l: math.div(20em, typo.$font-size-init-calc);
+
+
+$icon-size-default: math.div(24em, typo.$font-size-init-calc);

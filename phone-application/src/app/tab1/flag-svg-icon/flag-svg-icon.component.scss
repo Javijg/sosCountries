@@ -1,0 +1,17 @@
+@use '/src/theme/variables.scss' as var;
+
+:host {
+    height: var.$icon-size-default;
+    width: var.$icon-size-default;
+    .container {
+        display: flex;
+        align-items: center;    
+        
+
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}

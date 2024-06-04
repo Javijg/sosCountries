@@ -1,0 +1,16 @@
+<h2 class="title">Local Emergency</h2>
+
+<div class="list">
+  <ng-container *ngFor="let country of countries$ | async">
+    <article (click)="onCountrySelection(country)">
+      <img class="flag" [src]="country.flags.svg" alt="SVG Image" />
+      <span> {{country.name.common}}</span>
+    </article>
+  </ng-container>
+</div>
+
+<app-country-details
+  *ngIf="emergencyCountryNumbers$ | async as emergencyCountryNumbers"
+  [country]="selectedCountry"
+  [emergencyNumbers]="emergencyCountryNumbers"
+></app-country-details>
